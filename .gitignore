@@ -1,0 +1,62 @@
+# Зависимости
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Логи
+logs/
+*.log
+log.txt
+
+# Переменные окружения
+.env
+.env.local
+.env.*.local
+.env.production
+
+# Файлы IDE и редакторов
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Директории сборки
+dist/
+build/
+coverage/
+
+# Кеши
+.cache/
+.parcel-cache/
+.eslintcache
+
+# Файлы отчётов
+*.pid
+*.seed
+*.pid.lock
+
+# Отладка
+.nyc_output/
+
+# Файлы конфигурации пользователей
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Директории с временными файлами
+tmp/
+temp/
+
+# Файлы TypeScript компилятора
+*.tsbuildinfo
+
+# Директории с бэкапами
+*.bak
+*.backup
