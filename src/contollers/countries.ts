@@ -23,13 +23,13 @@ export const getCountryByName = async (req: Request, res: Response, next: NextFu
 
     const country = data[0];
 
-    if(!country) return next(new NotFoundError('Country not found'));
+    if (!country) return next(new NotFoundError('Country not found'));
 
     const codes = country.borders?.join(',')
 
     let neighbors = [] as Array<any>;
 
-    if( codes ) {
+    if (codes) {
         neighbors = await getNeighbors(codes);
     }
 
