@@ -1,13 +1,13 @@
 import { CustomError } from './custom-error';
 
-export class NotFoundError extends CustomError {
-  statusCode = 404;
+export class CacheError extends CustomError {
+  statusCode = 500;
 
-  constructor(message = 'Not found') {
+  constructor(message = 'Cache error') {
     super(message);
     this.message = message;
 
-    Object.setPrototypeOf(this, NotFoundError.prototype);
+    Object.setPrototypeOf(this, CacheError.prototype);
   }
 
   serializeError() {
