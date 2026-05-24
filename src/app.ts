@@ -17,7 +17,7 @@ const run = async () => {
   try {
     await initRedis();
 
-    app.listen(3000, () => {
+    app.listen(8080, () => {
       console.log('Start');
     });
   } catch (error) {

@@ -1,8 +1,8 @@
 import { Router } from 'express';
 
-import { getAllCountries, getCountryByName } from '../controllers/countries';
 import publicCache from '../middlewares/public-cache';
 import cacheMiddleware from '../middlewares/cache-middleware';
+import {getAllCountries, getCountryByName} from "../contollers/countries";
 
 const router = Router();
 
