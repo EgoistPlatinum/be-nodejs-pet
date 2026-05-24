@@ -1,10 +1,16 @@
-import {Router} from 'express';
+import { Router } from 'express';
+
+import publicCache from '../middlewares/public-cache';
+import cacheMiddleware from '../middlewares/cache-middleware';
 import {getAllCountries, getCountryByName} from "../contollers/countries";
-import publicCache from "../middlewares/public-cache";
 
 const router = Router();
 
-router.get('/', publicCache, getAllCountries)
-router.get('/name/:name', publicCache, getCountryByName)
+router.get('/', [publicCache, cacheMiddleware(300)], getAllCountries);
+router.get(
+  '/name/:name',
+  [publicCache, cacheMiddleware(300)],
+  getCountryByName
+);
 
 export default router;
